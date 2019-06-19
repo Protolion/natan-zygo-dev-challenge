@@ -15,7 +15,6 @@ class Drinks extends React.Component {
               <img src={drink.image_url} className="drink-card__img" ></img>
               <div className="drink-card__body">
               <h2> {drink.name} </h2>
-              <p>  distilled : {drink.distilled ? "true" : "false"} </p>
               <p>  {drink.description} </p>
               </div>
             </div>

@@ -100,6 +100,11 @@ class AdvancedSearch extends React.Component {
               </select>
             </div>
           </div>
+
+          <div className="row custom-number-tittle">
+            <p>All the numbers will search for a value that is greater than the number you input!</p>
+          </div>
+          
           <div className="row">
             <div className="advanced-form-field">
               Bitterness : 
