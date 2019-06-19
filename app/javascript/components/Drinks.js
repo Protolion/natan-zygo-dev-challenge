@@ -9,6 +9,7 @@ class Drinks extends React.Component {
     }
   }
 
+  //modelo de bebida "html" que irá ser renderizado
   model(drink, key){
     return <div key={key} className="card drink-card">
               <img src={drink.image_url} className="drink-card__img" ></img>
@@ -20,6 +21,7 @@ class Drinks extends React.Component {
             </div>
   }
 
+  //Algoritimo de busca avaçada, retorna verdadeiro ou falso para saber se a bebida vai ser renderizada ou não
   filterDrink(drink, filter){
     let fields =[ 'alcohol_level',
                   'distilled',
@@ -55,10 +57,16 @@ class Drinks extends React.Component {
     return ret;
   }
 
+  //Filtra e retorna o array contendo as bebidas para serem renderizadas
   drawDrinks(drinkArray, searchFilter , advancedFilter){
     let ret = <p>No drinks exist</p>
 
     if(drinkArray.length > 0){
+      drinkArray = drinkArray.sort(function(a, b) {
+        if(a.name.toLowerCase() < b.name.toLowerCase()) return -1;
+        if(a.name.toLowerCase() > b.name.toLowerCase()) return 1;
+        return 0;
+        });
 
     let drinks = drinkArray.filter(
       (drink) => {

@@ -1,5 +1,6 @@
 import React from "react";
 
+// muda o tipo de busca
 class SearchType extends React.Component {
   render () {
     return (

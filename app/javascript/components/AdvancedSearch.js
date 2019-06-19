@@ -14,6 +14,7 @@ class AdvancedSearch extends React.Component {
     }
   }
 
+  //gerencia todos os inputs dos usuarios
   handleInputChange(event) {
     let target = event.target;
     let value = target.type === 'checkbox' ? target.checked : target.value;
@@ -32,6 +33,7 @@ class AdvancedSearch extends React.Component {
   }
 
   render () {
+    //formulario que o usuario preenche para a busca avançada 
     return (
     <div className="advanced-form" >
         <form>

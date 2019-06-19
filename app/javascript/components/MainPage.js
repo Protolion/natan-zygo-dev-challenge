@@ -32,6 +32,7 @@ class MainPage extends React.Component {
     this.setState({advancedSearch : filter});
   }
 
+  //Renderiza o componente do tipo de busca selecionado
   renderSearchType(){
     let ret = <EasySearch simpleSearch={this.state.simpleSearch} 
                           updateSimpleSearch={this.updateSimpleSearch.bind(this)}/>;

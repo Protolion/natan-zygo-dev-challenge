@@ -1,6 +1,7 @@
 import React from "react";
 
 class EasySearch extends React.Component {
+  //busca simples por texto
   render () {
     return (
       <div className="simple-form">
